@@ -24,16 +24,17 @@ import createWebStorage from "redux-persist/lib/storage/createWebStorage";
 
 // Fallback storage for SSR
 const createNoopStorage = () => ({
-  getItem(_key: any) {
+  getItem(key: string): Promise<null> {
     return Promise.resolve(null);
   },
-  setItem(_key: any, value: any) {
+  setItem<T>(key: string, value: T): Promise<T> {
     return Promise.resolve(value);
   },
-  removeItem(_key: any) {
+  removeItem(key: string): Promise<void> {
     return Promise.resolve();
   },
 });
+
 
 const storage =
   typeof window !== "undefined"
