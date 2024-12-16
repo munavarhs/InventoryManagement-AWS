@@ -6,6 +6,7 @@ import { Archive, Layout, LucideIcon, Menu, Clipboard, User, SlidersHorizontal, 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import Image from "next/image";
 
 interface SidebarLinkProps {
     href: string;
@@ -64,7 +65,13 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        <div className="font-bold text-sm">Logo</div>
+        <Image 
+              src="https://s3-inventorymanagement-buc.s3.us-east-1.amazonaws.com/logo.png"
+              alt="Logo"
+              width={27}
+              height={27}
+              className="rounded-full w-8"
+         />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
