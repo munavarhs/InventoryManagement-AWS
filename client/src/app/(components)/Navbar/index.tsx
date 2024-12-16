@@ -62,8 +62,8 @@ const Navbar = () => {
             <Image 
               src="https://s3-inventorymanagement-buc.s3.us-east-1.amazonaws.com/profile.jpg"
               alt="Profile"
-              width={50}
-              height={50}
+              width={30}
+              height={30}
               className="rounded-full h-full object-cover"
             />
             <span className="font-semibold">Munavar</span>
